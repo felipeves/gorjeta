@@ -12,17 +12,28 @@
      font-size: 62.5%;
      --jagged-ice: #C5E4E7;
      --white: #FFF;
+     --sherpa-blue: #00474B;
+     --greyish-turquoise: #5E7A7D;
+     --topaz: #26C2AE;
+     --regent-grey: #7F9D9F;
  } 
  
  body {
- 
+    font-size: 1.6rem;
     background: var(--jagged-ice);
- 
  }
  
- main {
-     background: var(--white);
-  
-    
- 
- }
+
+header {
+     padding-top: 5rem;
+     padding-bottom: 4rem;
+
+     display: flex;
+     justify-content: center;
+}
+
+main {
+    background: var(--white);
+    padding: 3.2rem 2.4rem;
+    border-radius: 2.5rem 2.5rem 0 0;
+}
