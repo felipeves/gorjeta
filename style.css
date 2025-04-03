@@ -16,6 +16,7 @@
      --greyish-turquoise: #5E7A7D;
      --topaz: #26C2AE;
      --regent-grey: #7F9D9F;
+     --squeeze: #F3F9FA;
  } 
  
  body {
@@ -41,6 +42,11 @@ main {
 .info {
     padding-inline: .8rem;
 
+    div {
+padding-bottom: 3.2rem;
+      
+    }
+
     strong {
           color: var(--greyish-turquoise);
     }
@@ -48,6 +54,127 @@ main {
     .input-box {
           margin-top: .6rem;
           background: var(--squeeze);
+          display: flex;
+          align-items: center;
+          padding: .6rem 1.8rem;
+          border-radius: .5rem;
+
+          input {
+               border: none;
+               background: transparent;
+               text-align: right;
+               width: 100%;
+               font-size: 2.4rem;
+               outline: none;
+               font-weight: 700;
+               color: var(--sherpa-blue);
           }
+          input::placeholder {
+            color: var(--sherpa-blue);
+            opacity: 0.35;
+      }
+
+      &:has(input:focus) {
+        outline: 2px solid var(--topaz);
+      }
     }
+
+    .tip {
+      div {
+         margin-top: 1.6rem;
+
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 1.6rem;
+
+         button {
+              font-size: 2.4rem;
+              font-weight: 700;
+              color: var(--white);
+              border: none;
+              background: var(--sherpa-blue);
+              padding-block: .6rem;
+              border-radius: 5px;
+
+         }
+
+         input {
+             width: 100%;
+             background: var(--squeeze);
+             color: var(--sherpa-blue);
+             text-align: center;
+             padding-block: .6rem;
+             border: none;
+             border-radius: 5px;
+             font-size: 2.4rem;
+             font-weight: 700;
+             color: var(--sherpa-blue);
+
+             &::placeholder {
+                 color: var(--beetle-green);
+
+             }
+
+             &:focus {
+                  outline: 2px solid var(--topaz);
+
+             }
+
+         }
+
+      }
+
+   }
+
+}
+
+.results {
+    background: var(--sherpa-blue);
+    border-radius: 1.5rem;
+    padding: 4rem 2.4rem 2.4rem;
+
+     div {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 2rem;
+
+     }
+
+
+    p {
+      color: var(--white);
+      font-weight: 700;
+      
+
+      span {
+          color: var(--regent-grey);
+          font-size: 1.3rem;
+
+      }
+
+    }
+
+    strong {
+        color: var(--topaz);
+        font-size: 3.2rem;
+
+    }
+
+    button {
+        margin-top: 1.6rem;
+        width: 100%;
+        background: var(--topaz);
+        border: none;
+        border-radius: .5rem;
+        padding-block: 9rem;
+        font-size: 2rem;
+        color: var(--sherpa-blue);
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+
+}
+
 
