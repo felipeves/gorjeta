@@ -76,7 +76,9 @@ function RemoveClassButtonSelected () {
     
         tipPercentage = 0
         document.querySelector("#custom-tip").value = ""
-        removeClassButtonSelectedClass()
+        
+        RemoveClassButtonSelected()
+        
     
        
     
