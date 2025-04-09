@@ -17,7 +17,7 @@ function receiveNumberOfPeopleValue() {
 
 function receiveTipPercentageValue(value) {
     tipPercentage = value / 100
-    calculateResults() 
+    
     document.querySelector("#custom-tip").value = ""
     
 
@@ -27,6 +27,7 @@ function receiveTipPercentageValue(value) {
 
      buttonSelected = document.querySelector(`#button-${value}`)
      buttonSelected.classList.add("button-selected")
+     calculateResults()
 }
     
 function receiveCustomTipPercentageValue() {
@@ -63,6 +64,31 @@ function RemoveClassButtonSelected () {
  
        }
  
+    }
+
+    function reset() {
+        bill = 0
+        document.querySelector("#bill").value = ""
+         
+        
+        numberOfPeople = 0
+        document.querySelector("#people").value = ""
+    
+        tipPercentage = 0
+        document.querySelector("#custom-tip").value = ""
+        removeClassButtonSelectedClass()
+    
+       
+    
+        
+       if (customTipInput.value !== "") {
+            customTipInput.value = ""
+    
+        }
+    
+        document.querySelector(".amount strong").innerText = "$0.00"
+        document.querySelector(".total strong").innerText = "$0.00"
+    
     }
 
 
